@@ -1,9 +1,11 @@
 from fungsi import clear
+
 import inquirer
 
 def menu_login():
     clear()
     print('=== LOGIN DELTA FORCE ARMORY ===')
+
 
     pertanyaan = [
         inquirer.List('pilihan',
@@ -15,4 +17,10 @@ def menu_login():
     jawaban = inquirer.prompt(pertanyaan)
     nomor_pilihan = jawaban['pilihan']
     pilih = nomor_pilihan.split('.')[0]
+
+    print("1. Login")
+    print("2. Register")
+    print("3. Keluar")
+    pilih = input("Pilih menu (1-3): ")
+
     return pilih
